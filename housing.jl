@@ -45,9 +45,8 @@ set_silent(housing)
     0 <= nA, Int
 end)
 
-
-@constraint(housing, c1, 2000000 >= 282000 * nT + 400000 * nA)
 @constraint(housing, c2, 4*nT + 40*nA <= 140)
+@constraint(housing, c1, 2000000 >= 282000 * nT + 400000 * nA)
 
 @objective(housing, Max, 10000 * nT + 15000 * nA)
 
